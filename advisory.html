@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crop & Weather Advisory | Krishi Seva Portal</title>
+  <link rel="stylesheet" href="D:\WD CP\home page\style.css"/>
+  <link rel="stylesheet" href="advisory.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🌾 Krishi Seva Portal</div>
+    <ul class="nav-links">
+      <li><a href="D:\WD CP\home page\index.html">Home</a></li>
+      <li><a href="D:\WD CP\home page\schemes\schemes.html">Schemes</a></li>
+      <li><a href="D:\WD CP\home page\advisory\advisory.html" class="active">Advisory</a></li>
+      <li><a href="D:\WD CP\home page\register\register.html">Register</a></li>
+      <li><a href="D:\WD CP\home page\contact\contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Crop & Weather Advisory</h1>
+    <p>Seasonal crop recommendations, live weather updates, pest alerts, and best farming practices</p>
+  </section>
+
+  <!-- SEASON TABS -->
+  <section class="season-tabs-section">
+    <div class="season-tabs">
+      <button class="tab-btn active" onclick="showSeason('kharif')">🌧️ Kharif (Jun–Oct)</button>
+      <button class="tab-btn" onclick="showSeason('rabi')">❄️ Rabi (Nov–Mar)</button>
+      <button class="tab-btn" onclick="showSeason('zaid')">☀️ Zaid (Mar–Jun)</button>
+    </div>
+  </section>
+
+  <!-- CROP TABLES -->
+  <section class="crop-section">
+
+    <!-- KHARIF -->
+    <div class="season-content active" id="kharif">
+      <h2 class="season-title">🌧️ Kharif Season Crops</h2>
+      <div class="table-wrapper">
+        <table class="crop-table">
+          <thead>
+            <tr>
+              <th>Crop</th>
+              <th>Sowing Period</th>
+              <th>Harvest Period</th>
+              <th>Suitable States</th>
+              <th>Water Requirement</th>
+              <th>Advisory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Rice (Paddy)</td>
+              <td>June – July</td>
+              <td>October – November</td>
+              <td>WB, UP, Punjab, Odisha</td>
+              <td>High (1200–1800 mm)</td>
+              <td>Use certified seeds; ensure proper drainage</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Maize</td>
+              <td>June – July</td>
+              <td>September – October</td>
+              <td>Karnataka, MP, Bihar</td>
+              <td>Medium (500–800 mm)</td>
+              <td>Apply nitrogen fertiliser in splits</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Soybean</td>
+              <td>June – July</td>
+              <td>October</td>
+              <td>MP, Maharashtra, Rajasthan</td>
+              <td>Medium (450–700 mm)</td>
+              <td>Inoculate seeds with Rhizobium culture</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Cotton</td>
+              <td>May – June</td>
+              <td>November – January</td>
+              <td>Gujarat, Punjab, Maharashtra</td>
+              <td>Medium (500–600 mm)</td>
+              <td>Monitor for bollworm; use Bt cotton varieties</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Groundnut</td>
+              <td>June – July</td>
+              <td>October – November</td>
+              <td>Gujarat, AP, Tamil Nadu</td>
+              <td>Low–Medium (500–600 mm)</td>
+              <td>Ensure well-drained sandy loam soil</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Tur (Arhar)</td>
+              <td>June – July</td>
+              <td>January – March</td>
+              <td>UP, Maharashtra, Karnataka</td>
+              <td>Low (600–750 mm)</td>
+              <td>Intercrop with sorghum for best results</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RABI -->
+    <div class="season-content" id="rabi">
+      <h2 class="season-title">❄️ Rabi Season Crops</h2>
+      <div class="table-wrapper">
+        <table class="crop-table">
+          <thead>
+            <tr>
+              <th>Crop</th>
+              <th>Sowing Period</th>
+              <th>Harvest Period</th>
+              <th>Suitable States</th>
+              <th>Water Requirement</th>
+              <th>Advisory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Wheat</td>
+              <td>October – December</td>
+              <td>March – April</td>
+              <td>Punjab, Haryana, UP</td>
+              <td>Medium (450–650 mm)</td>
+              <td>Sow timely; avoid late sowing yield loss</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Mustard</td>
+              <td>October – November</td>
+              <td>February – March</td>
+              <td>Rajasthan, UP, MP</td>
+              <td>Low (250–400 mm)</td>
+              <td>Apply sulphur fertiliser for better oil content</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Chickpea (Gram)</td>
+              <td>October – November</td>
+              <td>February – March</td>
+              <td>MP, Rajasthan, Maharashtra</td>
+              <td>Low (300–400 mm)</td>
+              <td>Treat seeds with Trichoderma before sowing</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Barley</td>
+              <td>October – November</td>
+              <td>March – April</td>
+              <td>UP, Rajasthan, MP</td>
+              <td>Low (250–300 mm)</td>
+              <td>Suitable for saline soils; low-input crop</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Potato</td>
+              <td>October – November</td>
+              <td>January – March</td>
+              <td>UP, West Bengal, Bihar</td>
+              <td>Medium (500–700 mm)</td>
+              <td>Use certified disease-free seed tubers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ZAID -->
+    <div class="season-content" id="zaid">
+      <h2 class="season-title">☀️ Zaid Season Crops</h2>
+      <div class="table-wrapper">
+        <table class="crop-table">
+          <thead>
+            <tr>
+              <th>Crop</th>
+              <th>Sowing Period</th>
+              <th>Harvest Period</th>
+              <th>Suitable States</th>
+              <th>Water Requirement</th>
+              <th>Advisory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Watermelon</td>
+              <td>February – March</td>
+              <td>May – June</td>
+              <td>UP, Karnataka, AP</td>
+              <td>Medium (400–600 mm)</td>
+              <td>Needs warm dry weather; drip irrigation ideal</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Muskmelon</td>
+              <td>February – March</td>
+              <td>May – June</td>
+              <td>UP, Punjab, Rajasthan</td>
+              <td>Low–Medium</td>
+              <td>Sandy loam soil preferred; avoid waterlogging</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Cucumber</td>
+              <td>March – April</td>
+              <td>May – June</td>
+              <td>All states</td>
+              <td>Medium</td>
+              <td>Grow on trellis for better air circulation</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-seedling"></i> Moong (Green Gram)</td>
+              <td>March – April</td>
+              <td>June – July</td>
+              <td>Rajasthan, UP, Karnataka</td>
+              <td>Low (300–400 mm)</td>
+              <td>Short duration crop; good for soil health</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- WEATHER WIDGET -->
+  <section class="weather-section">
+    <h2 class="section-title">🌤️ Live Weather Updates</h2>
+    <p class="weather-sub">Check current weather conditions for major agricultural regions in India</p>
+    <div class="weather-widget-wrap">
+      <a class="weatherwidget-io"
+        href="https://forecast7.com/en/28d6177d21/new-delhi/"
+        data-label_1="NEW DELHI"
+        data-label_2="Weather"
+        data-theme="green">
+        NEW DELHI Weather
+      </a>
+      <a class="weatherwidget-io"
+        href="https://forecast7.com/en/19d0772d87/mumbai/"
+        data-label_1="MUMBAI"
+        data-label_2="Weather"
+        data-theme="green">
+        MUMBAI Weather
+      </a>
+      <a class="weatherwidget-io"
+        href="https://forecast7.com/en/12d9777d56/bangalore/"
+        data-label_1="BANGALORE"
+        data-label_2="Weather"
+        data-theme="green">
+        BANGALORE Weather
+      </a>
+    </div>
+    <script>
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src='https://weatherwidget.io/js/widget.min.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,'script','weatherwidget-io-js');
+    </script>
+  </section>
+
+  <!-- PEST ALERTS -->
+  <section class="pest-section">
+    <h2 class="section-title">⚠️ Pest & Disease Alerts</h2>
+    <div class="pest-grid">
+      <div class="pest-card alert-high">
+        <div class="pest-header">
+          <i class="fas fa-bug"></i>
+          <span class="alert-badge high">High Alert</span>
+        </div>
+        <h3>Fall Armyworm</h3>
+        <p>Severe infestation reported in maize fields across Karnataka and Telangana. Spray Spinetoram 11.7% SC @ 0.5 ml/litre immediately.</p>
+        <span class="pest-region"><i class="fas fa-map-marker-alt"></i> Karnataka, Telangana, AP</span>
+      </div>
+      <div class="pest-card alert-medium">
+        <div class="pest-header">
+          <i class="fas fa-bug"></i>
+          <span class="alert-badge medium">Medium Alert</span>
+        </div>
+        <h3>Brown Plant Hopper (Rice)</h3>
+        <p>Moderate BPH activity in paddy fields of Odisha and West Bengal. Drain fields and apply Buprofezin 25% SC @ 1 ml/litre.</p>
+        <span class="pest-region"><i class="fas fa-map-marker-alt"></i> Odisha, West Bengal</span>
+      </div>
+      <div class="pest-card alert-low">
+        <div class="pest-header">
+          <i class="fas fa-leaf"></i>
+          <span class="alert-badge low">Advisory</span>
+        </div>
+        <h3>Wheat Rust (Yellow Rust)</h3>
+        <p>Early signs of yellow rust observed in northern Punjab. Preventive spray of Propiconazole 25% EC @ 0.1% recommended.</p>
+        <span class="pest-region"><i class="fas fa-map-marker-alt"></i> Punjab, Haryana</span>
+      </div>
+      <div class="pest-card alert-medium">
+        <div class="pest-header">
+          <i class="fas fa-tint"></i>
+          <span class="alert-badge medium">Medium Alert</span>
+        </div>
+        <h3>Cotton Bollworm</h3>
+        <p>Bollworm pressure increasing in Vidarbha region. Use pheromone traps @ 5/acre and apply recommended insecticides at threshold.</p>
+        <span class="pest-region"><i class="fas fa-map-marker-alt"></i> Vidarbha, Gujarat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FARMING TIPS -->
+  <section class="tips-section">
+    <h2 class="section-title">💡 Best Farming Practices</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <i class="fas fa-tint"></i>
+        <h3>Irrigation Tips</h3>
+        <ul>
+          <li>Use drip or sprinkler irrigation to save up to 40% water</li>
+          <li>Irrigate during early morning or evening to reduce evaporation</li>
+          <li>Avoid waterlogging — it damages root systems</li>
+          <li>Mulching reduces soil moisture loss significantly</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <i class="fas fa-flask"></i>
+        <h3>Fertiliser Tips</h3>
+        <ul>
+          <li>Always get a Soil Health Card before applying fertilisers</li>
+          <li>Apply nitrogen in split doses for better absorption</li>
+          <li>Use bio-fertilisers (Rhizobium, PSB) to reduce chemical input</li>
+          <li>Avoid excess urea — it degrades soil health long term</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Soil Health Tips</h3>
+        <ul>
+          <li>Practice crop rotation every season to maintain nutrients</li>
+          <li>Add organic manure / FYM at least once per year</li>
+          <li>Avoid burning crop residue — incorporate it into the soil</li>
+          <li>Green manuring with Dhaincha or Sunhemp improves fertility</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Pest Management Tips</h3>
+        <ul>
+          <li>Follow Integrated Pest Management (IPM) practices</li>
+          <li>Use sticky yellow traps for early pest detection</li>
+          <li>Spray pesticides only when pest crosses economic threshold</li>
+          <li>Wear protective gear while spraying chemicals</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>🌾 Krishi Seva Portal</h3>
+        <p>Ministry of Agriculture & Farmers Welfare, Government of India</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="D:\WD CP\home page\index.html">Home</a></li>
+          <li><a href="D:\WD CP\home page\schemes\schemes.html">Schemes</a></li>
+          <li><a href="D:\WD CP\home page\advisory\advisory.html">Advisory</a></li>
+          <li><a href="D:\WD CP\home page\register\register.html">Register</a></li>
+          <li><a href="D:\WD CP\home page\contact\contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> Kisan Call Centre: 1800-180-1551</p>
+        <p><i class="fas fa-envelope"></i> help@krishiseva.gov.in</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Krishi Seva Portal | Government of India | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="D:\WD CP\home page\script.js"></script>
+  <script src="D:\WD CP\home page\advisory\advisory.js"></script>
+ 
+</body>
+</html>

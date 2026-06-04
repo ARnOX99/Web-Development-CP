@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & About | Krishi Seva Portal</title>
+  <link rel="stylesheet" href="D:\WD CP\home page\style.css"/>
+  <link rel="stylesheet" href="contact.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🌾 Krishi Seva Portal</div>
+    <ul class="nav-links">
+      <li><a href="D:\WD CP\home page\index.html">Home</a></li>
+      <li><a href="D:\WD CP\home page\schemes\schemes.html">Schemes</a></li>
+      <li><a href="D:\WD CP\home page\advisory\advisory.html">Advisory</a></li>
+      <li><a href="D:\WD CP\home page\register\register.html">Register</a></li>
+      <li><a href="D:\WD CP\home page\contact\contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Contact & About Us</h1>
+    <p>Learn about our mission, meet the team, and get in touch with us</p>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-card">
+        <i class="fas fa-bullseye"></i>
+        <h3>Our Mission</h3>
+        <p>To digitally connect every farmer in India with government schemes, real-time crop advisories, and agricultural support services through a single, easy-to-use platform.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-eye"></i>
+        <h3>Our Vision</h3>
+        <p>A future where every Indian farmer — regardless of location or literacy — has equal access to government resources, timely information, and financial support.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Our Values</h3>
+        <p>Transparency, inclusivity, and farmer-first approach. We believe in simplifying government processes and reducing the information gap at the grassroots level.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELPLINE SECTION -->
+  <section class="helpline-section">
+    <h2 class="section-title">📞 Helpline & Support</h2>
+    <div class="helpline-grid">
+      <div class="helpline-card">
+        <i class="fas fa-phone-volume"></i>
+        <h3>Kisan Call Centre</h3>
+        <p>Available 24x7 in all regional languages</p>
+        <a href="tel:18001801551" class="helpline-num">1800-180-1551</a>
+        <span class="free-badge">Toll Free</span>
+      </div>
+      <div class="helpline-card">
+        <i class="fas fa-envelope-open-text"></i>
+        <h3>Email Support</h3>
+        <p>Write to us for scheme-related queries</p>
+        <a href="mailto:help@krishiseva.gov.in" class="helpline-num">help@krishiseva.gov.in</a>
+      </div>
+      <div class="helpline-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Head Office</h3>
+        <p>Ministry of Agriculture & Farmers Welfare</p>
+        <span class="helpline-num">Krishi Bhavan, New Delhi – 110001</span>
+      </div>
+      <div class="helpline-card">
+        <i class="fas fa-clock"></i>
+        <h3>Office Hours</h3>
+        <p>Monday to Friday</p>
+        <span class="helpline-num">9:00 AM – 5:30 PM IST</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + MAP -->
+  <section class="contact-main">
+    <div class="contact-form-box">
+      <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+      <div class="form-group">
+        <label>Your Name <span>*</span></label>
+        <input type="text" id="cName" placeholder="Enter your full name"/>
+        <span class="error-msg" id="err-cName"></span>
+      </div>
+      <div class="form-group">
+        <label>Mobile Number <span>*</span></label>
+        <input type="text" id="cMobile" placeholder="10-digit mobile number" maxlength="10"/>
+        <span class="error-msg" id="err-cMobile"></span>
+      </div>
+      <div class="form-group">
+        <label>Email Address <span>*</span></label>
+        <input type="email" id="cEmail" placeholder="your@email.com"/>
+        <span class="error-msg" id="err-cEmail"></span>
+      </div>
+      <div class="form-group">
+        <label>Subject <span>*</span></label>
+        <select id="cSubject">
+          <option value="">-- Select Subject --</option>
+          <option>Scheme Enquiry</option>
+          <option>Registration Issue</option>
+          <option>Technical Problem</option>
+          <option>Advisory Feedback</option>
+          <option>Other</option>
+        </select>
+        <span class="error-msg" id="err-cSubject"></span>
+      </div>
+      <div class="form-group">
+        <label>Message <span>*</span></label>
+        <textarea id="cMessage" rows="5" placeholder="Write your message here..."></textarea>
+        <span class="error-msg" id="err-cMessage"></span>
+      </div>
+      <button class="btn-submit-contact" onclick="submitContact()">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+      <div class="contact-success" id="contactSuccess">
+        ✅ Your message has been sent successfully! We will get back to you within 2 working days.
+      </div>
+    </div>
+
+    <div class="map-box">
+      <h2><i class="fas fa-map-marked-alt"></i> Find Us</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9!2d77.2090!3d28.6224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sKrishi%20Bhavan!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+        width="100%"
+        height="320"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="map-address">
+        <i class="fas fa-map-marker-alt"></i>
+        Krishi Bhavan, Dr. Rajendra Prasad Road, New Delhi – 110001
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section">
+    <h2 class="section-title">👨‍💻 Meet Our Team</h2>
+    <p class="team-sub">This portal was designed and developed by a passionate team of 1st year students at Vishwakarma Institute of Technology, Pune</p>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:#e8f5e9;">
+          <i class="fas fa-user" style="color:#2e7d32;"></i>
+        </div>
+        <h3>Swayam Phadtare</h3>
+        <span class="team-role">Lead Developer</span>
+        <p>Home Page, Navbar, CSS Theming & Code Deployment</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:#fff8e1;">
+          <i class="fas fa-user" style="color:#f9a825;"></i>
+        </div>
+        <h3>Shatakshi Petker</h3>
+        <span class="team-role">Frontend Developer</span>
+        <p>Schemes Page, CSS Grid Layout & JS Search Filter</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:#e3f2fd;">
+          <i class="fas fa-user" style="color:#1565c0;"></i>
+        </div>
+        <h3>Shubham Pitty</h3>
+        <span class="team-role">UI Designer</span>
+        <p>Advisory Page, Crop Tables, Weather Widget & Tips</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:#fbe9e7;">
+          <i class="fas fa-user" style="color:#bf360c;"></i>
+        </div>
+        <h3>Sanita Potdar</h3>
+        <span class="team-role">Form Developer</span>
+        <p>Registration Form, JS Validation & Success Popup</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" style="background:#f3e5f5;">
+          <i class="fas fa-user" style="color:#6a1b9a;"></i>
+        </div>
+        <h3>Arya Petkar</h3>
+        <span class="team-role">Content & QA</span>
+        <p>Contact Page, About Section, Maps & Final Testing</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>🌾 Krishi Seva Portal</h3>
+        <p>Ministry of Agriculture & Farmers Welfare, Government of India</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="D:\WD CP\home page\index.html">Home</a></li>
+          <li><a href="D:\WD CP\home page\schemes\schemes.html">Schemes</a></li>
+          <li><a href="D:\WD CP\home page\advisory\advisory.html">Advisory</a></li>
+          <li><a href="D:\WD CP\home page\register\register.html">Register</a></li>
+          <li><a href="D:\WD CP\home page\contact\contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> Kisan Call Centre: 1800-180-1551</p>
+        <p><i class="fas fa-envelope"></i> help@krishiseva.gov.in</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Krishi Seva Portal | Government of India | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="D:\WD CP\home page\script.js"></script>
+  <script src="D:\WD CP\home page\contact\contact.js"></script>
+ 
+</body>
+</html>

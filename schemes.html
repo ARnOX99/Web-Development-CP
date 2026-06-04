@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schemes & Policies | Krishi Seva Portal</title>
+  <link rel="stylesheet" href="D:\WD CP\home page\style.css"/>
+  <link rel="stylesheet" href="schemes.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR (same as index.html) -->
+  <nav class="navbar">
+    <div class="logo">🌾 Krishi Seva Portal</div>
+    <ul class="nav-links">
+      <li><a href="D:\WD CP\home page\index.html">Home</a></li>
+      <li><a href="D:\WD CP\home page\schemes\schemes.html" class="active">Schemes</a></li>
+      <li><a href="D:\WD CP\home page\advisory\advisory.html">Advisory</a></li>
+      <li><a href="D:\WD CP\home page\register\register.html">Register</a></li>
+      <li><a href="D:\WD CP\home page\contact\contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Government Agricultural Schemes</h1>
+    <p>Explore all active central government schemes designed to support and empower Indian farmers</p>
+  </section>
+
+  <!-- SEARCH BAR -->
+  <section class="search-section">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="schemeSearch" placeholder="Search schemes by name..." onkeyup="filterSchemes()"/>
+    </div>
+  </section>
+
+  <!-- SCHEMES GRID -->
+  <section class="schemes-section">
+    <div class="schemes-grid" id="schemesGrid">
+
+      <div class="scheme-card" data-name="pm kisan pradhan mantri kisan samman nidhi">
+        <div class="scheme-icon" style="background:#e8f5e9;">
+          <i class="fas fa-rupee-sign" style="color:#2e7d32;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Financial Aid</span>
+          <h3>PM-KISAN</h3>
+          <p>Pradhan Mantri Kisan Samman Nidhi provides ₹6,000 per year in three equal instalments to all landholding farmer families across India.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: ₹6,000/year</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: All landholding farmers</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Direct Bank Transfer</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="pmfby pradhan mantri fasal bima yojana crop insurance">
+        <div class="scheme-icon" style="background:#fff8e1;">
+          <i class="fas fa-shield-alt" style="color:#f9a825;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Crop Insurance</span>
+          <h3>PMFBY</h3>
+          <p>Pradhan Mantri Fasal Bima Yojana offers financial support to farmers suffering crop loss or damage due to unforeseen events like floods or drought.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Premium: 2% for Kharif, 1.5% for Rabi</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: All farmers growing notified crops</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Via Banks / CSCs</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="kisan credit card kcc loan">
+        <div class="scheme-icon" style="background:#e3f2fd;">
+          <i class="fas fa-credit-card" style="color:#1565c0;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Credit</span>
+          <h3>Kisan Credit Card</h3>
+          <p>The KCC scheme provides farmers with timely and adequate credit for agriculture and allied activities at subsidised interest rates.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: Credit up to ₹3 Lakh @ 4% p.a.</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: All farmers, SHGs, JLGs</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Via Nationalised Banks</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="soil health card shc scheme">
+        <div class="scheme-icon" style="background:#fbe9e7;">
+          <i class="fas fa-leaf" style="color:#bf360c;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Soil Management</span>
+          <h3>Soil Health Card</h3>
+          <p>This scheme provides every farmer a Soil Health Card with crop-wise recommendations of nutrients and fertilisers for individual farm plots.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: Free soil testing & card</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: All farmers</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Via Krishi Kendra</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="pm krishi sinchai yojana irrigation water">
+        <div class="scheme-icon" style="background:#e0f7fa;">
+          <i class="fas fa-tint" style="color:#00838f;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Irrigation</span>
+          <h3>PM Krishi Sinchai Yojana</h3>
+          <p>Aims to ensure access to some means of protective irrigation to all agricultural farms and improve water use efficiency with "More Crop Per Drop".</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: Drip & sprinkler subsidy up to 90%</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: All farmers with land records</li>
+            <li><i class="fas fa-check-circle"></i> Mode: State Agriculture Dept.</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="national food security mission nfsm rice wheat pulses">
+        <div class="scheme-icon" style="background:#f3e5f5;">
+          <i class="fas fa-seedling" style="color:#6a1b9a;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Food Security</span>
+          <h3>National Food Security Mission</h3>
+          <p>NFSM aims to increase production of rice, wheat, pulses, and coarse cereals through area expansion and productivity enhancement.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: Free seeds, tools & training</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: Small & marginal farmers</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Via District Agriculture Office</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="paramparagat krishi vikas yojana pkvy organic farming">
+        <div class="scheme-icon" style="background:#e8f5e9;">
+          <i class="fas fa-spa" style="color:#388e3c;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Organic Farming</span>
+          <h3>Paramparagat Krishi Vikas Yojana</h3>
+          <p>PKVY promotes organic farming through adoption of organic village by cluster approach and certification. Helps farmers get premium prices for organic produce.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: ₹50,000/hectare over 3 years</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: Farmer groups (min. 20 farmers)</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Via State Agriculture Dept.</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="scheme-card" data-name="micro irrigation fund drip sprinkler nabard">
+        <div class="scheme-icon" style="background:#fff8e1;">
+          <i class="fas fa-water" style="color:#ff8f00;"></i>
+        </div>
+        <div class="scheme-body">
+          <span class="scheme-tag">Irrigation</span>
+          <h3>Micro Irrigation Fund</h3>
+          <p>NABARD manages a dedicated Micro Irrigation Fund of ₹5,000 crore to expand coverage of micro irrigation beyond the provisions under PMKSY.</p>
+          <ul class="scheme-details">
+            <li><i class="fas fa-check-circle"></i> Benefit: Low interest loans for drip/sprinkler</li>
+            <li><i class="fas fa-check-circle"></i> Eligibility: State Govts & Farmers</li>
+            <li><i class="fas fa-check-circle"></i> Mode: Via NABARD / State Nodal Agency</li>
+          </ul>
+          <a href="D:\WD CP\home page\register\register.html" class="scheme-btn">Apply Now</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" style="display:none; text-align:center; padding:40px; color:#888;">
+      <i class="fas fa-search" style="font-size:2rem; margin-bottom:10px;"></i>
+      <p>No schemes found matching your search. Try a different keyword.</p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>🌾 Krishi Seva Portal</h3>
+        <p>Ministry of Agriculture & Farmers Welfare, Government of India</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="D:\WD CP\home page\index.html">Home</a></li>
+          <li><a href="D:\WD CP\home page\schemes\schemes.html">Schemes</a></li>
+          <li><a href="D:\WD CP\home page\advisory\advisory.html">Advisory</a></li>
+          <li><a href="D:\WD CP\home page\register\register.html">Register</a></li>
+          <li><a href="D:\WD CP\home page\contact\contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> Kisan Call Centre: 1800-180-1551</p>
+        <p><i class="fas fa-envelope"></i> help@krishiseva.gov.in</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Krishi Seva Portal | Government of India | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="D:\WD CP\home page\script.js"></script>
+  <script src="D:\WD CP\home page\schemes\schemes.js"></script>
+  
+</body>
+</html>
