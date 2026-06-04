@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krishi Seva Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      🌾 Krishi Seva Portal
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="schemes\schemes.html">Schemes</a></li>
+      <li><a href="advisory\advisory.html">Advisory</a></li>
+      <li><a href="register\register.html">Register</a></li>
+      <li><a href="contact\contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      📢 PM-KISAN: Next installment releasing soon &nbsp;&nbsp;|&nbsp;&nbsp;
+      🌱 Rabi crop advisory updated for 2025-26 &nbsp;&nbsp;|&nbsp;&nbsp;
+      💧 PM Krishi Sinchai Yojana applications open &nbsp;&nbsp;|&nbsp;&nbsp;
+      📋 Soil Health Cards available at nearest Krishi Kendra &nbsp;&nbsp;|&nbsp;&nbsp;
+      🌾 Kisan Credit Card — Apply Now at your nearest bank &nbsp;&nbsp;|&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Farmers,<br/>Strengthening India 🇮🇳</h1>
+      <p>Your one-stop portal for agricultural schemes, crop advisories, weather updates, and government services.</p>
+      <div class="hero-buttons">
+        <a href="schemes\schemes.html" class="btn-primary">Explore Schemes</a>
+        <a href="register\register.html" class="btn-secondary">Register as Farmer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats">
+    <div class="stat-card">
+      <h2>12+ Crore</h2>
+      <p>Farmers Registered</p>
+    </div>
+    <div class="stat-card">
+      <h2>8+</h2>
+      <p>Active Govt. Schemes</p>
+    </div>
+    <div class="stat-card">
+      <h2>28 States</h2>
+      <p>Coverage Across India</p>
+    </div>
+    <div class="stat-card">
+      <h2>₹6000/yr</h2>
+      <p>PM-KISAN Benefit</p>
+    </div>
+  </section>
+
+  <!-- FEATURE CARDS -->
+  <section class="features">
+    <h2 class="section-title">Our Services</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fas fa-file-alt"></i>
+        <h3>Govt. Schemes</h3>
+        <p>Explore all active central and state agricultural schemes with eligibility and benefits.</p>
+        <a href="schemes\schemes.html" class="card-link">View Schemes →</a>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-cloud-sun"></i>
+        <h3>Crop Advisory</h3>
+        <p>Get seasonal crop recommendations, weather updates, and pest alerts for your region.</p>
+        <a href="advisory\advisory.html" class="card-link">View Advisory →</a>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-user-plus"></i>
+        <h3>Farmer Registration</h3>
+        <p>Register yourself to receive scheme benefits, advisories, and government notifications.</p>
+        <a href="register\register.html" class="card-link">Register Now →</a>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Helpline & Support</h3>
+        <p>Contact our support team or find your nearest Krishi Kendra for in-person assistance.</p>
+        <a href="contact\contact.html" class="card-link">Contact Us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-home">
+    <div class="about-text">
+      <h2>About Krishi Seva Portal</h2>
+      <p>The Krishi Seva Portal is an initiative by the Ministry of Agriculture & Farmers Welfare, Government of India. Our mission is to digitally connect every farmer with government resources, schemes, and real-time agricultural guidance — directly from their phone or computer.</p>
+      <p>We aim to reduce the information gap between the government and farmers by providing a single, easy-to-use platform available in English and regional languages.</p>
+      <a href="contact\contact.html" class="btn-primary">Learn More</a>
+    </div>
+    <div class="about-image">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="Farmer in field"/>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>🌾 Krishi Seva Portal</h3>
+        <p>Ministry of Agriculture & Farmers Welfare, Government of India</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schemes\schemes.html">Schemes</a></li>
+          <li><a href="advisory\advisory.html">Advisory</a></li>
+          <li><a href="register\register.html">Register</a></li>
+          <li><a href="contact\contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-phone"></i> Kisan Call Centre: 1800-180-1551</p>
+        <p><i class="fas fa-envelope"></i> help@krishiseva.gov.in</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Krishi Seva Portal | Government of India | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="D:\WD CP\home page\script.js"></script>
+
+</body>
+</html>
